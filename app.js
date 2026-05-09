@@ -21,6 +21,7 @@ const multerFilter = (req, file, cb) => {
 };
 
 const upload = multer({ storage: multerStorage, fileFilter: multerFilter });
+
 const resizePhoto = (req, res, next) => {
   if (!req.file) return next();
 
